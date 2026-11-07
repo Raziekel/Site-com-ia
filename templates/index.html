@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <!-- viewport = garante que o site se adapte ao celular -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site com IA | Completo e Responsivo</title>
+    <!-- url_for = função do Flask que carrega o CSS do jeito certo -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='estilos.css') }}">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Meu Site com Inteligência Artificial</h1>
+            <p>HTML + CSS + JavaScript + Python (Flask) + IA</p>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section class="card">
+            <h2>Bem-vindo!</h2>
+            <p>
+                Este é um site 100% funcional e responsivo.
+                Use o chat abaixo para conversar com a Inteligência Artificial.
+                Tudo roda: frontend &rarr; backend Python &rarr; IA &rarr; resposta na tela.
+            </p>
+        </section>
+
+        <section class="card">
+            <h2>Conversa com a IA</h2>
+
+            <div id="caixa-mensagens">
+                <div class="mensagem ia">
+                    Olá! Eu sou a assistente virtual. Como posso te ajudar hoje?
+                </div>
+            </div>
+
+            <form id="form-chat">
+                <input type="text" id="entrada-mensagem"
+                       placeholder="Digite sua pergunta aqui..." required>
+                <button type="submit">Enviar</button>
+            </form>
+
+            <p id="status"></p>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Meu Site com IA — Projeto completo e pronto para deploy</p>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

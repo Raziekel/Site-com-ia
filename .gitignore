@@ -1,0 +1,11 @@
+# Arquivo que protege seus segredos — NUNCA envie a chave da IA para o GitHub
+.env
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.venv/
+venv/
+.DS_Store
+*.log
+instance/

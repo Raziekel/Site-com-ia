@@ -1,0 +1,19 @@
+# Configuração automática de deploy no Render.
+# Basta conectar o repositório no Render que ele lê este arquivo.
+services:
+  - type: web
+    name: site-com-ia-gratuita
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
+      # Preencha no painel do Render (Environment) com sua chave gratuita:
+      - key: GROQ_API_KEY
+        sync: false
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: DEBUG
+        value: "False"

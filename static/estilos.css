@@ -1,0 +1,140 @@
+/* ============================================================
+   estilos.css — Design responsivo (celular / tablet / desktop)
+   Como funciona: as regras dentro de @media (max-width: 768px)
+   só são aplicadas em telas pequenas (celulares).
+   ============================================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Cores do site — mude aqui para personalizar */
+:root {
+    --cor-primaria: #2563eb;
+    --cor-secundaria: #1e40af;
+    --cor-fundo: #f0f4f8;
+    --cor-texto: #1f2937;
+    --cor-ia: #e0e7ff;
+    --cor-usuario: #d1fae5;
+    --sombra: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Cabeçalho */
+header {
+    background: linear-gradient(135deg, var(--cor-primaria), var(--cor-secundaria));
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+header h1 { font-size: 1.8rem; margin-bottom: 0.5rem; }
+header p  { opacity: 0.9; }
+
+/* Conteúdo principal */
+main { flex: 1; padding: 2rem 0; }
+
+.card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: var(--sombra);
+    margin-bottom: 2rem;
+}
+
+.card h2 { color: var(--cor-primaria); margin-bottom: 1rem; }
+
+/* Área do chat */
+#caixa-mensagens {
+    height: 400px;
+    overflow-y: auto;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background: #f9fafb;
+}
+
+.mensagem {
+    margin-bottom: 1rem;
+    padding: 0.8rem 1rem;
+    border-radius: 18px;
+    max-width: 80%;
+    line-height: 1.4;
+    word-wrap: break-word;
+    animation: aparecer 0.25s ease;
+}
+
+@keyframes aparecer {
+    from { opacity: 0; transform: translateY(6px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.mensagem.usuario { background: var(--cor-usuario); margin-left: auto; }
+.mensagem.ia      { background: var(--cor-ia);      margin-right: auto; }
+
+/* Formulário de envio */
+#form-chat { display: flex; gap: 0.5rem; }
+
+#entrada-mensagem {
+    flex: 1;
+    padding: 0.9rem 1rem;
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+#entrada-mensagem:focus { outline: none; border-color: var(--cor-primaria); }
+
+button {
+    background: var(--cor-primaria);
+    color: white;
+    border: none;
+    padding: 0.9rem 1.5rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover:not(:disabled) { background: var(--cor-secundaria); }
+button:disabled { background: #9ca3af; cursor: not-allowed; }
+
+#status { margin-top: 0.8rem; color: #6b7280; font-size: 0.9rem; min-height: 1.2em; }
+
+/* Rodapé */
+footer {
+    background: #1f2937;
+    color: white;
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: auto;
+}
+
+/* ===== RESPONSIVIDADE: telas de até 768px (celulares) ===== */
+@media (max-width: 768px) {
+    header h1 { font-size: 1.3rem; }
+    .card { padding: 1.2rem; }
+    #caixa-mensagens { height: 300px; }
+    .mensagem { max-width: 90%; }
+    #form-chat { flex-direction: column; }
+    button { width: 100%; }
+}

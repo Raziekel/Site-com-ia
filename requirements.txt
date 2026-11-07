@@ -1,0 +1,8 @@
+Flask==3.0.0
+flask-cors==4.0.0
+python-dotenv==1.0.0
+# Cliente para o Groq (padrão) — usa endpoint compatível com OpenAI
+openai>=1.40
+# SDK do Google Gemini (alternativa, opcional)
+google-genai>=0.3.0
+gunicorn==21.2.0
