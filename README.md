@@ -7,7 +7,7 @@ Site completo: **HTML + CSS + JavaScript + Python (Flask) + IA gratuita**.
 
 | Provedor | Onde pegar a chave | Modelo padrão |
 |---|---|---|
-| ⚡ **Groq** (recomendado) | https://console.groq.com/keys | llama-3.3-70b-versatile |
+| ⚡ **Groq** (recomendado) | https://console.groq.com/keys | openai/gpt-oss-20b |
 | 🔷 Google Gemini | https://aistudio.google.com/apikey | gemini-3.8-flash |
 
 O código detecta automaticamente qual chave você configurou. Se colocar as duas, usa o Groq.
