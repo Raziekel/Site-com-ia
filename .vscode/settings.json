@@ -1,0 +1,20 @@
+{
+  "python.terminal.useEnvFile": true,
+  "cSpell.words": [
+    "aistudio",
+    "apikey",
+    "dotenv",
+    "Exhausted",
+    "gemini",
+    "Gemini",
+    "genai",
+    "groq",
+    "Groq",
+    "llama",
+    "Llama",
+    "longer",
+    "openai",
+    "Unauthenticated",
+    "versatile"
+  ]
+}

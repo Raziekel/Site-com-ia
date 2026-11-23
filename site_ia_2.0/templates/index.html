@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assistente IA — Site Completo e Responsivo</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='estilos.css') }}">
+</head>
+<body>
+
+    <header class="topbar">
+        <div class="container topbar-inner">
+            <div class="brand">
+                <span class="brand-mark">✦</span>
+                <div>
+                    <strong>Assistente IA</strong>
+                    <small>Groq · Gratuito · Responsivo</small>
+                </div>
+            </div>
+            <span id="status-pill" class="pill pill-offline">Verificando…</span>
+        </div>
+    </header>
+
+    <main class="container page">
+
+        <section class="hero">
+            <span class="eyebrow">HTML · CSS · JavaScript · Python Flask · IA gratuita</span>
+            <h1>Converse com uma IA <span class="grad">rápida e gratuita</span></h1>
+            <p>
+                Faça perguntas, peça ajuda, crie ideias ou receba resumos.
+                O navegador fala com o backend Python, que consulta a IA e mostra
+                a resposta na hora — sem recarregar a página.
+            </p>
+            <div class="chips">
+                <button class="chip" data-prompt="Explique de forma simples o que é uma API.">O que é uma API?</button>
+                <button class="chip" data-prompt="Me dê 3 ideias de projetos para iniciantes em programação.">Ideias de projetos</button>
+                <button class="chip" data-prompt="Escreva uma mensagem curta e motivacional para começar o dia.">Mensagem motivacional</button>
+            </div>
+        </section>
+
+        <section class="chat-card">
+            <div class="chat-head">
+                <div>
+                    <h2>💬 Conversa com a IA</h2>
+                    <p id="chat-meta">aguardando conexão</p>
+                </div>
+                <span id="model-tag" class="model-tag">sem modelo ativo</span>
+            </div>
+
+            <div id="caixa-mensagens" class="messages">
+                <div class="bubble ia">
+                    <span class="avatar">🤖</span>
+                    <div class="bubble-body">Olá! Eu sou sua assistente virtual. Em que posso ajudar hoje?</div>
+                </div>
+            </div>
+
+            <form id="form-chat" class="composer">
+                <input
+                    id="entrada-mensagem"
+                    class="input"
+                    type="text"
+                    placeholder="Digite sua mensagem e pressione Enter…"
+                    autocomplete="off"
+                    required
+                >
+                <button id="btn-enviar" class="btn" type="submit">Enviar</button>
+            </form>
+            <p id="status-texto" class="hint"></p>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 Assistente IA · Flask + Groq · 100% responsivo, rápido e gratuito ✨</p>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

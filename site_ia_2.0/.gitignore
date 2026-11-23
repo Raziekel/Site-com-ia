@@ -1,0 +1,10 @@
+# Segredos e lixo de build — nunca vão para o GitHub
+.env
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+.DS_Store
+instance/
+*.log
