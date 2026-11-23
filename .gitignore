@@ -1,10 +1,23 @@
+<<<<<<< HEAD
 # Segredos e lixo de build — nunca vão para o GitHub
+=======
+# Arquivo que protege seus segredos — NUNCA envie a chave da IA para o GitHub
+>>>>>>> 6dcad058ffd7e4eb44b81e7db6b5098fb84f2aeb
 .env
 __pycache__/
 *.pyc
 *.pyo
+<<<<<<< HEAD
 .venv/
 venv/
 .DS_Store
 instance/
 *.log
+=======
+.pytest_cache/
+.venv/
+venv/
+.DS_Store
+*.log
+instance/
+>>>>>>> 6dcad058ffd7e4eb44b81e7db6b5098fb84f2aeb

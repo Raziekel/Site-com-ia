@@ -2,12 +2,20 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
+<<<<<<< HEAD
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Assistente IA — Site Completo e Responsivo</title>
+=======
+    <!-- viewport = garante que o site se adapte ao celular -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site com IA | Completo e Responsivo</title>
+    <!-- url_for = função do Flask que carrega o CSS do jeito certo -->
+>>>>>>> 6dcad058ffd7e4eb44b81e7db6b5098fb84f2aeb
     <link rel="stylesheet" href="{{ url_for('static', filename='estilos.css') }}">
 </head>
 <body>
 
+<<<<<<< HEAD
     <header class="topbar">
         <div class="container topbar-inner">
             <div class="brand">
@@ -66,13 +74,55 @@
                 <button id="btn-enviar" class="btn" type="submit">Enviar</button>
             </form>
             <p id="status-texto" class="hint"></p>
+=======
+    <header>
+        <div class="container">
+            <h1>Meu Site com Inteligência Artificial</h1>
+            <p>HTML + CSS + JavaScript + Python (Flask) + IA</p>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section class="card">
+            <h2>Bem-vindo!</h2>
+            <p>
+                Este é um site 100% funcional e responsivo.
+                Use o chat abaixo para conversar com a Inteligência Artificial.
+                Tudo roda: frontend &rarr; backend Python &rarr; IA &rarr; resposta na tela.
+            </p>
+        </section>
+
+        <section class="card">
+            <h2>Conversa com a IA</h2>
+
+            <div id="caixa-mensagens">
+                <div class="mensagem ia">
+                    Olá! Eu sou a assistente virtual. Como posso te ajudar hoje?
+                </div>
+            </div>
+
+            <form id="form-chat">
+                <input type="text" id="entrada-mensagem"
+                       placeholder="Digite sua pergunta aqui..." required>
+                <button type="submit">Enviar</button>
+            </form>
+
+            <p id="status"></p>
+>>>>>>> 6dcad058ffd7e4eb44b81e7db6b5098fb84f2aeb
         </section>
 
     </main>
 
+<<<<<<< HEAD
     <footer class="footer">
         <div class="container">
             <p>© 2026 Assistente IA · Flask + Groq · 100% responsivo, rápido e gratuito ✨</p>
+=======
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Meu Site com IA — Projeto completo e pronto para deploy</p>
+>>>>>>> 6dcad058ffd7e4eb44b81e7db6b5098fb84f2aeb
         </div>
     </footer>
 

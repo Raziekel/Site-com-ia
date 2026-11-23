@@ -1,7 +1,15 @@
+<<<<<<< HEAD
 # Deploy automático no Render: conecte o repositório e ele lê este arquivo.
 services:
   - type: web
     name: site-assistente-ia
+=======
+# Configuração automática de deploy no Render.
+# Basta conectar o repositório no Render que ele lê este arquivo.
+services:
+  - type: web
+    name: site-com-ia-gratuita
+>>>>>>> 6dcad058ffd7e4eb44b81e7db6b5098fb84f2aeb
     runtime: python
     plan: free
     buildCommand: pip install -r requirements.txt
@@ -9,7 +17,11 @@ services:
     envVars:
       - key: PYTHON_VERSION
         value: 3.11.0
+<<<<<<< HEAD
       # Preencha no painel do Render (Environment):
+=======
+      # Preencha no painel do Render (Environment) com sua chave gratuita:
+>>>>>>> 6dcad058ffd7e4eb44b81e7db6b5098fb84f2aeb
       - key: GROQ_API_KEY
         sync: false
       - key: GEMINI_API_KEY
